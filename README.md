@@ -89,9 +89,7 @@ python -m src.main --dataset cora --model GIN --trials 50 --gamma 0.5 --save_plo
 
 ## Data Generating Processes
 
-The code provides two data generating processes for synthetically simulating individual features within network: one with and one without non-linearity. You can use either of these dgps or add your dgp in `data_generative_process.py` file.
-
-
+The code offers two data generative processes for simulating individual features within a network: one with non-linearity and one without. You can use either of these DGPs or add your own in the `data_generative_process.py` file.
 
 ## Models
 
