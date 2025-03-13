@@ -97,9 +97,9 @@ The code provides two data generating processes for synthetically simulating ind
 
 The implementation supports three Graph Neural Network architectures:
 
-1. **GCN**: Graph Convolutional Network
-2. **GraphSAGE**: Graph Sample and Aggregate
-3. **GIN**: Graph Isomorphism Network
+1. **GIN**: Graph Isomorphism Network
+2. **GCN**: Graph Convolutional Network
+3. **GraphSAGE**: Graph Sample and Aggregate
 
 These models can be used for both treatment and outcome predictions.
 
