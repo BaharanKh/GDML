@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Running an Experiment
+First, place your data — including the adjacency matrix and node features — in the data folder, following the project structure outlined above. If you plan to use the data generative processes in our framework, you can find them in the `data_generative_process.py` file or add your own there.
 
 To run an experiment with default settings:
 
