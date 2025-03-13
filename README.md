@@ -1,6 +1,6 @@
 # GDML: Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects
 
-This repository contains code for estimating causal effects in networked settings, where treatments and outcomes may be influenced by network connections.
+This repository contains code for paper [Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects](https://arxiv.org/abs/2403.11332).
 
 ## Overview
 
