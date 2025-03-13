@@ -25,7 +25,7 @@ network-causal-inference/
 │   ├── experiment.py         # Experiment runner
 │   ├── analysis.py           # Result analysis functions
 │   └── main.py               # Main script
-├── data/                     # Dataset directory
+├── data/                     # Dataset directory (create this directory and place your data here)
 ├── results/                  # Experimental results (CSV)
 └── plots/                    # Generated visualizations
 ```
@@ -73,10 +73,9 @@ The following arguments can be used to customize the experiment:
 --trials INT         Number of trials (default: 100)
 --dataset STRING     Dataset name: 'cora', 'pubmed', 'citeseer', 'BC', 'SBM' (default: 'cora')
 --model STRING       GNN model: 'GCN', 'GraphSage', 'GIN' (default: 'GIN')
---transform STRING   Feature transformation: 'pca', 'lda', 'none' (default: 'pca')
 --gamma FLOAT        Network effect strength (default: 0.25)
---gt INT             True direct treatment effect (default: 10)
---beta INT           True peer effect (default: 5)
+--theta INT             True direct treatment effect (default: 10)
+--alpha INT           True peer effect (default: 5)
 --K INT              Number of folds for cross-validation (default: 3)
 --device INT         GPU device ID (default: 0)
 --seed INT           Random seed (default: 0)
@@ -90,17 +89,9 @@ python -m src.main --dataset cora --model GIN --trials 50 --gamma 0.5 --save_plo
 
 ## Data Generating Processes
 
-The code provides several data generating processes for simulating network causal effects:
+The code provides two data generating processes for synthetically simulating individual features within network: one with and one without non-linearity. You can use either of these dgps or add your dgp in `data_generative_process.py` file.
 
-- `dgp0`: Basic model with no network effects on outcomes
-- `dgp1`: Model with network effects on outcomes (peer features)
-- `dgp2`: Model with network effects on outcomes (peer features and treatments)
-- `dgp3`: Model with network effects and covariate-dependent treatment assignment
-- `dgp4`: Model with network effects on both treatment assignment and outcomes
-- `dgp5`: Model with direct effect (`gt`) and peer effect (`beta`) on outcome
-- `dgp6`: Model with max aggregation of neighbors' features
 
-These can be configured through the experiment parameters.
 
 ## Models
 
@@ -118,17 +109,10 @@ The framework supports several standard network datasets:
 
 - **Cora**: Citation network of computer science papers
 - **Pubmed**: Citation network of medical papers
-- **Citeseer**: Citation network of research papers
-- **BC**: Boston College Facebook network
+- **Flickr**: Network of images shared on Flickr
 - **SBM**: Synthetic network from a Stochastic Block Model
+- **Indian Village**: Survey data from villages in Karnataka, India used for investigating the impact of Self-Help Group participation on financial risk tolerance through outstanding loan
 
 ## License
 
 [MIT License](LICENSE)
-
-## Acknowledgments
-
-This code builds on methods from the following papers:
-- Guo, S., McAuley, J., & Sundaresan, N. (2022). "Learning Individual Causal Effects from Networked Observational Data."
-- Viviano, D., & Bradic, J. (2021). "Network Counterfactuals via the Method of Influence Functions."
->>>>>>> 0001944 (Refactored code)
