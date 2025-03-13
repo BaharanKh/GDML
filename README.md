@@ -71,7 +71,7 @@ The following arguments can be used to customize the experiment:
 
 ```
 --trials INT         Number of trials (default: 100)
---dataset STRING     Dataset name: 'cora', 'pubmed', 'citeseer', 'BC', 'SBM' (default: 'cora')
+--dataset STRING     Dataset name: 'cora', 'pubmed', 'SBM' (default: 'cora')
 --model STRING       GNN model: 'GCN', 'GraphSage', 'GIN' (default: 'GIN')
 --gamma FLOAT        Network effect strength (default: 0.25)
 --theta INT             True direct treatment effect (default: 10)
