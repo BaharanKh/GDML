@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # GDML
 Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects
 =======
-# Network Causal Inference
 
 This repository contains code for estimating causal effects in networked settings, where treatments and outcomes may be influenced by network connections.
 
