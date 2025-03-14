@@ -1,14 +1,10 @@
 # GDML: Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects
 
-This repository contains code for paper [Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects](https://arxiv.org/abs/2403.11332).
+This repository contains code for paper [Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects](https://arxiv.org/abs/2403.11332), published at AISTATS'25.
 
 ## Overview
 
-The project implements methods for estimating:
-- Average Direct Effects (ADE) - the direct effect of a treatment on an individual's outcome
-- Average Peer Effects (APE) - the effect of neighbors' treatments on an individual's outcome
-
-The implementation uses Graph Neural Networks (GNNs) to model relationships in network data and estimates causal effects using a double machine learning approach.
+We propose a novel methodology for estimating causal effects in social networks under interference and  network-induced confounding. Our framework combines double machine learning framework with graph machine learning techniques, enabling accurate and efficient estimation of both direct and peer effects within a single observational social network. The proposed estimator achieves semiparametric efficiency under mild regularity conditions, ensuring consistent uncertainty quantification.
 
 ## Project Structure
 
@@ -110,6 +106,14 @@ The framework supports several standard network datasets:
 - **Flickr**: Network of images shared on Flickr
 - **SBM**: Synthetic network from a Stochastic Block Model
 - **Indian Village**: Survey data from villages in Karnataka, India used for investigating the impact of Self-Help Group participation on financial risk tolerance through outstanding loan
+
+## Contact
+Seyedeh Baharan Khatami skhatami@ucsd.edu
+
+## Bibtex
+If you use this work in your research, please cite the following:
+
+@inproceedings{khatamigraph, title={Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects}, author={Khatami, Seyedeh Baharan and Parikh, Harsh and Chen, Haowei and Roy, Sudeepa and Salimi, Babak}, booktitle={The 28th International Conference on Artificial Intelligence and Statistics} }
 
 ## License
 
