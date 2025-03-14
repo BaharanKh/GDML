@@ -112,8 +112,9 @@ Seyedeh Baharan Khatami skhatami@ucsd.edu
 
 ## Bibtex
 If you use this work in your research, please cite the following:
-
+<pre> ```
 @inproceedings{khatamigraph, title={Graph Machine Learning based Doubly Robust Estimator for Network Causal Effects}, author={Khatami, Seyedeh Baharan and Parikh, Harsh and Chen, Haowei and Roy, Sudeepa and Salimi, Babak}, booktitle={The 28th International Conference on Artificial Intelligence and Statistics} }
+`` </pre>
 
 ## License
 
